@@ -1,8 +1,8 @@
 import { charsets } from "_/src/charsets.js" 
 import fs from "fs"
 
-fs.rmSync("./data/charsets", { recursive: true, force: true })
-fs.mkdirSync("./data/charsets")
+fs.rmSync("./data/", { recursive: true, force: true })
+fs.mkdirSync("./data/")
 
 for(let charset in charsets) {
     let chars = ""
@@ -18,5 +18,5 @@ for(let charset in charsets) {
 
     let out = chars ?? ""
 
-    fs.writeFileSync(`./data/charsets/${charset}.${chars?.length ?? 0}.txt`, out)
+    fs.writeFileSync(`./data/${charset}.${chars?.length ?? 0}.txt`, out)
 }
