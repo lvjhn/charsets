@@ -1,0 +1,11 @@
+{
+    "type": "module",
+    "main": "index.js",
+    "description": "A simple project that extracts named subsets from UTF-8 space.",
+    "scripts" : {
+        "postinstall": "ln -Fsn ../ node_modules/_" 
+    },
+    "dependencies": {
+        "jest": "^29.7.0"
+    }
+}
