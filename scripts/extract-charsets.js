@@ -14,6 +14,9 @@ for(let charset in charsets) {
         chars = charsets[charset]()
     }
 
-    let out = chars
-    fs.writeFileSync(`./data/charsets/${charset}.${chars.length}.txt`, out)
+    console.log(charset, chars?.length ?? "N/A")
+
+    let out = chars ?? ""
+
+    fs.writeFileSync(`./data/charsets/${charset}.${chars?.length ?? 0}.txt`, out)
 }
